@@ -153,7 +153,7 @@ html {
   width: 100%;
 }
 
-.swiper-slide {
+.main-slide .swiper-slide {
   position: relative;
   width: auto;
   filter: brightness(60%);   /* 어둡게 */
@@ -161,7 +161,7 @@ html {
 }
 
 /* 현재 활성화된 슬라이드는 원래 밝기로 */
-.swiper-slide-active {
+.main-slide .swiper-slide-active {
   filter: brightness(100%);
 }
 
@@ -365,6 +365,7 @@ html {
 .sec-4 {
   padding: 38px 240px 152px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .sec-4_text-wrap {
@@ -386,11 +387,18 @@ html {
 
 .sec-4_img-wrap {
   gap: 14px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.sec-4_big-img {
+  width: 710px;
+  height: 698px;
 }
 
 .sec-4_item-wrap {
   flex-direction: column;
-  gap: 86px;
+  gap: 50px;
 }
 
 .sec-4_item {
@@ -492,11 +500,9 @@ html {
   font-weight: 400;
   color: #999;
 }
-
 .sec-5_item-box {
   gap: 10px;
 }
-
 .sec-5_item {
   flex-direction: column;
   gap: 20px;
@@ -528,6 +534,8 @@ html {
   font-weight: 700;
   color: #252525;
 }
+
+
 /* sec-5 끝 */
 
 /* sec-6 */
@@ -603,9 +611,9 @@ html {
   position: absolute;
   flex-direction: column;
   gap: 118px;
-  top: 50%;
+  top: 228px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
 }
 
 .sec-7_text-box p {
@@ -624,6 +632,17 @@ html {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
+  position: relative;
+}
+
+.sec-7_text-box .sec-7_btn-box span:hover::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
 }
 /* sec-7 끝 */
 
